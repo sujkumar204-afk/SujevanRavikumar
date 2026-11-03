@@ -790,6 +790,77 @@ footer {
   transform: translateY(0);
 }
 
+/* ── SOCIAL REELS ── */
+.social-intro {
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: -1rem 0 3rem;
+}
+
+.reel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 360px));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.reel-frame {
+  position: relative;
+  aspect-ratio: 9 / 17;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.reel-frame iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin: 4rem 0 0;
+}
+
+.pipeline-step { background: var(--surface); padding: 2rem 1.75rem; }
+
+.pipeline-num {
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.pipeline-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-text { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+@media (min-width: 1500px) {
+  .reel-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .reel-grid { grid-template-columns: minmax(0, 360px); }
+  .pipeline { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 520px) {
+  .pipeline { grid-template-columns: 1fr; }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
@@ -856,7 +927,7 @@ footer {
   <div class="about-left" data-reveal>
     <p class="section-eyebrow">About</p>
     <h2 class="section-heading">Telling stories that<br><em>need to be seen</em></h2>
-    <p class="about-text">I'm a 21-year-old Tamil creative from South London, currently completing my BA in Art Direction and VFX at the University of the Arts London. I've always been passionate about telling people's stories — putting faces, voices and communities on screen for the world to see.</p>
+    <p class="about-text">I'm a 21-year-old Tamil creative from South London and a graduate of the University of the Arts London, where I studied Production Arts for Screen with a focus on Art Direction and VFX. I've always been passionate about telling people's stories — putting faces, voices and communities on screen for the world to see.</p>
     <p class="about-text">With over 5 years of hands-on filmmaking experience, I've worked across the full production pipeline — from concept and storyboarding through to on-set direction, editing, colour grading and VFX. Calm under pressure, collaborative by nature, and driven to create work that genuinely connects.</p>
     <div class="skills-section">
       <div class="skills-group">
@@ -906,101 +977,130 @@ footer {
   <p class="section-eyebrow" data-reveal>Film Work</p>
   <h2 class="section-heading" data-reveal>Directed <em>Works</em></h2>
 
-  <!-- 01 The Brutal Spectacle Documentary -->
+  <!-- 01 Art That Moves -->
   <div class="film-entry" data-reveal>
     <div class="film-embed">
-      <iframe src="https://www.youtube.com/embed/DqRHD4Y1SMQ" title="The Brutal Spectacle Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/wm5XprrX7K8" title="Art That Moves" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="film-info">
-      <p class="film-num">01 / 05</p>
+      <p class="film-num">01 / 06</p>
+      <h3 class="film-title">Art That Moves</h3>
+      <p class="film-role">Director, Cinematographer &amp; Editor · University of Brighton</p>
+      <p class="film-desc">Art That Moves is an international project led by Dr Lucia King at the University of Brighton, exploring how migration, mobility and belonging are reshaping the way art is made, shown and understood. Working as a one-person crew, I directed, shot and edited the film, answering directly to Dr King — carrying the full weight of cinematography, editing and direction on a high-profile university commission.</p>
+    </div>
+  </div>
+
+  <!-- 02 The Brutal Spectacle -->
+  <div class="film-entry film-entry-reverse" data-reveal>
+    <div class="film-embed">
+      <iframe src="https://www.youtube.com/embed/DqRHD4Y1SMQ" title="The Brutal Spectacle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="film-info">
+      <p class="film-num">02 / 06</p>
       <h3 class="film-title">The Brutal Spectacle</h3>
       <p class="film-role">Director · Documentary</p>
       <p class="film-desc">A documentary that goes beyond the surface of sport to examine what draws people into brutal, physical competition. Directed with an observational eye, the film captures raw, unfiltered moments — the discipline, sacrifice, and humanity behind the spectacle. An honest portrait of athletes and the world they inhabit.</p>
     </div>
   </div>
 
-  <!-- 02 Payanam -->
-  <div class="film-entry film-entry-reverse" data-reveal>
+  <!-- 03 Payanam -->
+  <div class="film-entry" data-reveal>
     <div class="film-embed">
       <iframe src="https://www.youtube.com/embed/5A29_p2OXWI" title="Payanam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="film-info">
-      <p class="film-num">02 / 05</p>
+      <p class="film-num">03 / 06</p>
       <h3 class="film-title">Payanam</h3>
       <p class="film-role">Director · Short Film</p>
       <p class="film-desc">Payanam comes from wanting to hold onto small moments that don't seem important until they're gone. The film centres on the relationship between two brothers and the quiet, everyday time they share — observed rather than staged, honest rather than constructed. Rooted in an observational filmmaking practice, it treats film as a visual journal, documenting life as it happens. The film doesn't try to explain its cultural details, but presents them as they are lived. At its heart, it's about memory, absence, and finding peace in what remains.</p>
     </div>
   </div>
 
-  <!-- 03 The Day She Wrote -->
-  <div class="film-entry" data-reveal>
+  <!-- 04 The Day She Wrote -->
+  <div class="film-entry film-entry-reverse" data-reveal>
     <div class="film-embed">
       <iframe src="https://www.youtube.com/embed/vZ5G6nbpoj4" title="The Day She Wrote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="film-info">
-      <p class="film-num">03 / 05</p>
+      <p class="film-num">04 / 06</p>
       <h3 class="film-title">The Day She Wrote</h3>
       <p class="film-role">Director · Short Film</p>
       <p class="film-desc">A narrative short film directed and produced independently — a quiet, intimate story told with visual care and intention. Showcasing the full scope of production from pre to post, from the first draft through to final cut.</p>
     </div>
   </div>
 
-  <!-- 04 Picture This -->
-  <div class="film-entry film-entry-reverse" data-reveal>
+  <!-- 05 Picture This -->
+  <div class="film-entry" data-reveal>
     <div class="film-embed">
       <iframe src="https://www.youtube.com/embed/uOAdlbbyMrU" title="Picture This" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="film-info">
-      <p class="film-num">04 / 05</p>
+      <p class="film-num">05 / 06</p>
       <h3 class="film-title">Picture This</h3>
       <p class="film-role">Director of Photography · Short Film</p>
       <p class="film-desc">Served as Director of Photography — responsible for camera operation, shot composition, and the overall visual language across the full production. A collaboration that demonstrates the craft of working as a creative partner to bring another director's vision to life.</p>
     </div>
   </div>
 
-  <!-- 05 The Elephant Herd In My Room -->
-  <div class="film-entry" data-reveal>
+  <!-- 06 The Elephant Herd In My Room -->
+  <div class="film-entry film-entry-reverse" data-reveal>
     <div class="film-embed">
       <iframe src="https://www.youtube.com/embed/ijkCk0Mda7s" title="The Elephant Herd In My Room" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="film-info">
-      <p class="film-num">05 / 05</p>
+      <p class="film-num">06 / 06</p>
       <h3 class="film-title">The Elephant Herd In My Room</h3>
       <p class="film-role">Director · Animated Short Film · UAL</p>
       <p class="film-desc">A fully animated short film directed from script to screen as part of a UAL-commissioned production. Led pre-production including treatment, storyboarding and scheduling, through to editing, sound and final delivery — coordinating a crew to a fixed deadline.</p>
     </div>
   </div>
-
 </section>
 
 <!-- SOCIAL MEDIA CONTENT -->
 <section id="social">
   <p class="section-eyebrow" data-reveal>Content Creation</p>
   <h2 class="section-heading" data-reveal>Social Media <em>Work</em></h2>
-  <div class="social-grid" data-reveal>
-    <div class="social-card">
-      <div class="social-placeholder">
-        <span class="social-placeholder-label">Content Coming Soon</span>
-      </div>
-      <div class="social-card-info">
-        <p class="social-card-num">01</p>
-        <h3 class="social-card-title">Bronx Boxing Gym</h3>
-        <p class="social-card-role">Filmmaker & Content Creator</p>
-        <p class="social-card-desc">Social media content production — photo and video assets for promotional and social use, building the gym's digital presence and athlete stories.</p>
-      </div>
+  <p class="social-intro" data-reveal>Content for Bronx Boxing Gym, Camberwell — strategy, shooting, editing and publishing, built around the members, coaches and events that make the gym what it is.</p>
+
+  <div class="reel-grid" data-reveal>
+    <div class="reel-frame">
+      <iframe src="https://www.instagram.com/reel/Dc1Yp0-t1bs/embed" title="Bronx Boxing Gym reel 1" loading="lazy" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
     </div>
-    <div class="social-card">
-      <div class="social-placeholder">
-        <span class="social-placeholder-label">Content Coming Soon</span>
-      </div>
-      <div class="social-card-info">
-        <p class="social-card-num">02</p>
-        <h3 class="social-card-title">Croydon Boxing Academy</h3>
-        <p class="social-card-role">Lead Filmmaker & Photographer</p>
-        <p class="social-card-desc">End-to-end content production — concept, shoot, edit, and deliver photo and video, growing the academy's digital presence and athlete narratives.</p>
-      </div>
+    <div class="reel-frame">
+      <iframe src="https://www.instagram.com/reel/DbVcinvtnO8/embed" title="Bronx Boxing Gym reel 2" loading="lazy" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
+    </div>
+    <div class="reel-frame">
+      <iframe src="https://www.instagram.com/reel/DaAecV6MVO4/embed" title="Bronx Boxing Gym reel 3" loading="lazy" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
+    </div>
+    <div class="reel-frame">
+      <iframe src="https://www.instagram.com/reel/DaNcRVas6lk/embed" title="Bronx Boxing Gym reel 4" loading="lazy" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
     </div>
   </div>
+
+  <div class="pipeline" data-reveal>
+    <div class="pipeline-step">
+      <p class="pipeline-num">01</p>
+      <h3 class="pipeline-title">Strategy</h3>
+      <p class="pipeline-text">A consistent content calendar built around members, coaches and events.</p>
+    </div>
+    <div class="pipeline-step">
+      <p class="pipeline-num">02</p>
+      <h3 class="pipeline-title">Shoot</h3>
+      <p class="pipeline-text">Promotional and training content, filmed on location in the gym.</p>
+    </div>
+    <div class="pipeline-step">
+      <p class="pipeline-num">03</p>
+      <h3 class="pipeline-title">Edit</h3>
+      <p class="pipeline-text">Cut and graded end to end, from raw footage to finished reel.</p>
+    </div>
+    <div class="pipeline-step">
+      <p class="pipeline-num">04</p>
+      <h3 class="pipeline-title">Publish</h3>
+      <p class="pipeline-text">Treating the gym's brand as an ongoing client relationship.</p>
+    </div>
+  </div>
+
+  <a href="https://www.instagram.com/suj.films" target="_blank" class="resume-download">More on Instagram →</a>
 </section>
 
 <!-- VFX & 3D -->
@@ -1098,19 +1198,19 @@ footer {
       <div class="resume-entry">
         <div class="resume-entry-top">
           <p class="resume-entry-title">Production Intern</p>
-          <p class="resume-entry-year">Jun 2026 – Present</p>
+          <p class="resume-entry-year">2026</p>
         </div>
         <p class="resume-entry-org">Catsnake · London</p>
-        <p class="resume-entry-desc">Supporting the production team at this London story agency across 3 live client projects, assisting from development through delivery. Coordinating production logistics, scheduling, and asset organisation across 4 concurrent briefs. Contributing to work reaching 10,000+ views/impressions.</p>
+        <p class="resume-entry-desc">Supported the production team at this London story agency across live client projects, assisting from development through delivery. Coordinated production logistics, scheduling and asset organisation, and worked closely with producers and creatives to help turn concepts into finished content.</p>
       </div>
 
       <div class="resume-entry">
         <div class="resume-entry-top">
-          <p class="resume-entry-title">Content Strategist</p>
+          <p class="resume-entry-title">Content Producer</p>
           <p class="resume-entry-year">Mar 2026 – Present</p>
         </div>
         <p class="resume-entry-org">Bronx Boxing Gym · Camberwell</p>
-        <p class="resume-entry-desc">Own content strategy for the gym's social channels, growing follower count by 40% and average engagement by 55% over 4 months. Publishing 3 pieces of content per week across members, coaches and events — with top posts reaching 8,000+ views.</p>
+        <p class="resume-entry-desc">Own content strategy and production for the gym's social channels. Build a consistent content calendar around members, coaches and events, and shoot and edit promotional and training content — treating the gym's brand as an ongoing client relationship.</p>
       </div>
 
       <div class="resume-entry">
@@ -1119,7 +1219,7 @@ footer {
           <p class="resume-entry-year">Nov 2024 – Feb 2025</p>
         </div>
         <p class="resume-entry-org">The Herds · UAL</p>
-        <p class="resume-entry-desc">Directed a fully animated short from script to screen, screened to an audience of 80+ as part of a UAL-commissioned production. Led pre-production and post-production across a 12-week window, coordinating a crew of 6 to a fixed deadline.</p>
+        <p class="resume-entry-desc">Directed a fully animated short from script to screen as part of a UAL-commissioned production. Led pre-production (treatment, storyboard, scheduling) and post-production (editing, sound, delivery), coordinating a crew to a fixed deadline.</p>
       </div>
 
       <div class="resume-entry">
