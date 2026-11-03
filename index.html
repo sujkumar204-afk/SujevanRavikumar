@@ -861,6 +861,64 @@ footer {
   .pipeline { grid-template-columns: 1fr; }
 }
 
+/* ── METRICS ── */
+.metrics { margin-top: 5rem; padding-top: 4rem; border-top: 1px solid var(--border); }
+.metrics-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.metrics-title { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; letter-spacing: -0.01em; }
+.metrics-title em { font-style: italic; color: var(--accent); }
+.metrics-source { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+
+.metric-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin-bottom: 1px; }
+.metric-card { background: var(--surface); padding: 2rem 1.75rem; }
+.metric-num { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 300; line-height: 1; color: var(--accent); margin-bottom: 0.75rem; }
+.metric-label { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+.metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+.panel { background: var(--surface); padding: 2rem 1.75rem; }
+.panel-title { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+
+.legend { display: flex; align-items: center; gap: 0.5rem; font-size: 11px; color: var(--muted); margin-bottom: 1.25rem; }
+.legend span[class^="key-"] { width: 10px; height: 10px; display: inline-block; margin-left: 0.75rem; }
+.legend span[class^="key-"]:first-child { margin-left: 0; }
+.key-f { background: #3A3733; }
+.key-n { background: var(--accent); }
+
+.split-row { margin-bottom: 1.4rem; }
+.split-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem; }
+.split-label { font-family: var(--serif); font-size: 1.1rem; }
+.split-total { font-size: 12px; color: var(--ink); letter-spacing: 0.04em; }
+.split-bar { display: flex; height: 8px; background: var(--subtle); overflow: hidden; }
+.seg-f { background: #3A3733; display: block; }
+.seg-n { background: var(--accent); display: block; }
+.split-note { font-size: 11px; color: var(--muted); margin-top: 0.4rem; }
+
+.bar-row { display: grid; grid-template-columns: 110px 1fr 52px; align-items: center; gap: 0.75rem; margin-bottom: 0.7rem; }
+.bar-label { font-size: 12px; color: var(--muted); }
+.bar-track { height: 6px; background: var(--subtle); display: block; }
+.bar-fill { display: block; height: 100%; background: #4A4640; min-width: 2px; }
+.bar-fill.hot { background: var(--accent); }
+.bar-val { font-size: 12px; color: var(--ink); text-align: right; }
+
+.pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pill { font-size: 11px; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); letter-spacing: 0.04em; }
+
+.insights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-top: 1px; }
+.insight { background: var(--surface); padding: 2rem 1.75rem; }
+.insight-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 300; margin-bottom: 0.6rem; }
+.insight-text { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+@media (max-width: 900px) {
+  .metric-cards { grid-template-columns: 1fr 1fr; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .insights { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .metric-cards { grid-template-columns: 1fr; }
+  .bar-row { grid-template-columns: 90px 1fr 48px; }
+}
+
+.pipeline-tag { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); line-height: 1.7; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
@@ -1077,26 +1135,46 @@ footer {
     </div>
   </div>
 
-  <div class="pipeline" data-reveal>
-    <div class="pipeline-step">
-      <p class="pipeline-num">01</p>
-      <h3 class="pipeline-title">Strategy</h3>
-      <p class="pipeline-text">A consistent content calendar built around members, coaches and events.</p>
+  <div class="metrics" data-reveal>
+    <div class="metrics-head">
+      <h3 class="metrics-title">How I build a <em>campaign</em></h3>
+      <p class="metrics-source">Source: Instagram Insights · Bronx Boxing Gym</p>
     </div>
-    <div class="pipeline-step">
-      <p class="pipeline-num">02</p>
-      <h3 class="pipeline-title">Shoot</h3>
-      <p class="pipeline-text">Promotional and training content, filmed on location in the gym.</p>
+    <p class="social-intro" style="margin:0 0 2.5rem;">Every campaign starts with the data. I read who the audience is, give each format a job, shoot and edit to match, then review what worked and what's missing.</p>
+
+    <div class="pipeline">
+      <div class="pipeline-step">
+        <p class="pipeline-num">01</p>
+        <h3 class="pipeline-title">Read the audience</h3>
+        <p class="pipeline-text">Who follows, where they are and when they're online, before a single frame is shot.</p>
+        <p class="pipeline-tag">UK-based · mostly 25–44 · active Sun–Tue evenings</p>
+      </div>
+      <div class="pipeline-step">
+        <p class="pipeline-num">02</p>
+        <h3 class="pipeline-title">Plan around the community</h3>
+        <p class="pipeline-text">A consistent content calendar built around members, coaches and events, with each format given a job.</p>
+        <p class="pipeline-tag">Reels to reach new people · posts &amp; stories to hold the community</p>
+      </div>
+      <div class="pipeline-step">
+        <p class="pipeline-num">03</p>
+        <h3 class="pipeline-title">Shoot &amp; edit end to end</h3>
+        <p class="pipeline-text">Promotional and training content, filmed on location and edited in-house, treating the gym's brand as an ongoing client.</p>
+        <p class="pipeline-tag">Posts · reels · stories</p>
+      </div>
+      <div class="pipeline-step">
+        <p class="pipeline-num">04</p>
+        <h3 class="pipeline-title">Review &amp; refine</h3>
+        <p class="pipeline-text">Reading performance by format, spotting gaps and deciding what to do next.</p>
+        <p class="pipeline-tag">e.g. under-25s are the clear growth gap</p>
+      </div>
     </div>
-    <div class="pipeline-step">
-      <p class="pipeline-num">03</p>
-      <h3 class="pipeline-title">Edit</h3>
-      <p class="pipeline-text">Cut and graded end to end, from raw footage to finished reel.</p>
-    </div>
-    <div class="pipeline-step">
-      <p class="pipeline-num">04</p>
-      <h3 class="pipeline-title">Publish</h3>
-      <p class="pipeline-text">Treating the gym's brand as an ongoing client relationship.</p>
+
+    <p class="panel-title" style="margin:3.5rem 0 1.25rem;">What the data showed</p>
+    <div class="metric-cards">
+      <div class="metric-card"><p class="metric-num">90,000+</p><p class="metric-label">Views across posts, reels and stories</p></div>
+      <div class="metric-card"><p class="metric-num">6 in 10</p><p class="metric-label">Reel views came from people who don't follow the account</p></div>
+      <div class="metric-card"><p class="metric-num">8 in 10</p><p class="metric-label">Of the audience is based in the UK</p></div>
+      <div class="metric-card"><p class="metric-num">7 in 10</p><p class="metric-label">Of the audience is aged 25–44</p></div>
     </div>
   </div>
 
